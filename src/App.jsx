@@ -105,7 +105,7 @@ else{
 
   return (
     <>
-    <div className="text-center bg-black w-screen h-fit p-5">
+    <div className="text-center bg-black w-screen overflow-hidden">
        <Nav open={open}/>
         <div className="md:mt-10 mt-5 ">
         <Board guesses={guesses} word={word} currentGuess={currentguessarray} guesscount={guesscount}/>
@@ -115,6 +115,12 @@ else{
         <GamePause close={()=>setpause(false)} pause={pause} reset={reset} win={win} gameOver={gameOver} word={word}/>
         
         </div>
+        <footer className='bg-white w-screen'>
+    <div className='flex items-center justify-center space-x-2'>
+      <h1 className='text-xl text-gray-200'>More Games: </h1>
+      <a href='https://tictactoeunlimited.netlify.app/' target='blank' className='text-xl text-green-400 font-bold'> TicTacToe</a>
+    </div>
+  </footer>
     </div>
   
       </>
