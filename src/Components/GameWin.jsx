@@ -44,6 +44,7 @@ export default function GamePause({ isOpen, close,win,word,reset }) {
                   <p className="mt-2 text-lg text-white bg-inherit">
                     Play Again?
                   </p>
+                  <p className="mt-2 text-lg text-white bg-inherit">Word:</p>
                   <div className="mt-4 bg-inherit">
                     <Button
                       className="inline-flex items-center gap-2 rounded-md bg-green-400 py-1.5 px-3 text-sm font-semibold text-white  hover:bg-green-500"

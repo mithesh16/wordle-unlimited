@@ -1,7 +1,7 @@
 import { Button, Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from '@headlessui/react'
 import { useState } from 'react'
 
-export default function GamePause({ pause,close,gameOver,win,word,reset }) {
+export default function GamePause({ pause,close,gameOver,win,word,reset,streak }) {
     
   return (
     <div className="flex h-full bg-none items-center justify-center">
@@ -25,6 +25,9 @@ export default function GamePause({ pause,close,gameOver,win,word,reset }) {
                         You Won
                       </DialogTitle>
                       <p className="mt-2 text-lg text-white bg-inherit">
+                        Current Streak : {streak}
+                      </p>
+                      <p className="mt-2 text-lg text-white bg-inherit">
                         New Game?
                       </p>
                       <div className="mt-4 bg-inherit">
@@ -45,8 +48,15 @@ export default function GamePause({ pause,close,gameOver,win,word,reset }) {
                         You Lost
                       </DialogTitle>
                       <p className="mt-2 text-lg text-white bg-inherit">
+                        Word: {word}
+                      </p>
+                      <p className="mt-2 text-lg text-white bg-inherit">
+                        Previous Streak: {streak}
+                      </p>
+                      <p className="mt-2 text-lg text-white bg-inherit">
                         Play Again?
                       </p>
+                    
                       <div className="mt-4 bg-inherit">
                         <Button
                           className="inline-flex items-center gap-2 rounded-md bg-green-400 py-1.5 px-3 text-sm font-semibold text-white  hover:bg-green-500"
