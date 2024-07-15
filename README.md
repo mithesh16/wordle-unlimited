@@ -27,7 +27,7 @@ Install dependencies
   npm install
 ```
 
-Run the frontend (make sure backend server is running)
+Run the frontend 
 
 ```bash
   npm run start or npm run dev
